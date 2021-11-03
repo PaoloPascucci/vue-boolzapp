@@ -21,6 +21,11 @@ main {
     position: relative;
 }
 
+aside {
+    margin-left: 10%;
+    width: 300px;
+}
+
 .img {
     width: 300px;
     position: absolute;
@@ -43,7 +48,7 @@ img {
     line-height: 45px;
 }
 
-.fas {
+.Fa_ICON>.fas {
     line-height: 50px;
     padding: .5rem;
     height: 30px;
@@ -54,4 +59,54 @@ img {
     position: absolute;
     top: -16%;
     left: 20%;
+}
+
+.message {
+    background-color: #8edafc;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem;
+}
+
+.whitecircle {
+    width: 3rem;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.fa-bell-slash {
+    padding-top: 1rem;
+    padding-left: .8rem;
+    color: #8edafc;
+}
+
+.div {
+    padding-top: .5rem;
+    padding-left: .5rem
+}
+
+.div>a {
+    color: grey;
+}
+
+.search {
+    height: 40px;
+    background-color: #fafafa;
+    padding: .3rem .6rem;
+}
+
+.input {
+    height: 30px;
+    background-color: white;
+    width: 280px;
+    padding: 6px 3px;
+    color: grey;
+}
+
+.input>input {
+    margin: 1px;
+    border: none;
+    width: 250px;
 }
