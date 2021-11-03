@@ -14,20 +14,32 @@
 
 <body>
     <header>
-    </header>
-    <main class="clearfix">
-        <aside>
-            <div class="head">
+        <div class="head">
                 <div class="img">
                     <img src="./img/avatar_io.jpg" alt="">
                     <span>Nome Utente</span>
                 </div>
-                <div class="Fa_ICON">
-                    <i class="fas fa-circle-notch"></i>
-                    <i class="fas fa-comment-alt"></i>
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-            </div>
+                    <div class="Fa_ICON">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    </div>
+                    <div class="head_2">
+                        <div class="img">
+                            <img src="./img/avatar_1.jpg" alt="">
+                            <span>Michele</span>
+                        </div>
+                        <div class="Fa_ICON">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    </div>
+                    </header>
+                    <main class="clearfix">
+                        <aside>
             <div class="body">
                 <div class="message">
                     <div class="whitecircle">
@@ -45,8 +57,10 @@
                     </div>
                 
                 </div>
-                <div class="user">
-                    
+                <div class="user" id="app">
+                    <div class="" v-for="contact in contacts">
+                        <div> {{contact.name}}</div>
+                    </div>
                 </div>
             </div>
         </aside>

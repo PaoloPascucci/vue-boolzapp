@@ -13,31 +13,32 @@
 header {
     background-color: #009688;
     height: 100px;
+    padding: 2.5rem;
+    display: flex;
+    flex: row;
 }
 
-main {
-    background-color: #dcdbd3;
-    height: 400px;
-    position: relative;
-}
-
-aside {
-    margin-left: 10%;
-    width: 300px;
-}
-
-.img {
-    width: 300px;
-    position: absolute;
-    top: -15%;
-    left: 10%;
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #eaeaea;
-    border-right: 1px solid grey;
+    width: 300px;
+    margin-left: 10%;
+    height: 60px;
+}
+
+.head_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #eaeaea;
+    width: 700px;
     height: 60px;
 }
 
 img {
-    padding-top: 5px;
+    margin: 5px 10px;
     height: 50px;
     border-radius: 50%;
     vertical-align: bottom;
@@ -45,20 +46,24 @@ img {
 
 .img>span {
     vertical-align: middle;
-    line-height: 45px;
+    line-height: 60px;
 }
 
 .Fa_ICON>.fas {
-    line-height: 50px;
-    padding: .5rem;
+    padding: 5px;
+    margin-top: 15px;
     height: 30px;
     color: grey;
 }
 
-.Fa_ICON {
-    position: absolute;
-    top: -16%;
-    left: 20%;
+main {
+    background-color: #dcdbd3;
+    height: 400px;
+}
+
+aside {
+    margin-left: 11.65%;
+    width: 300px;
 }
 
 .message {
