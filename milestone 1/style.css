@@ -56,7 +56,7 @@ header {
 
 main {
     background-color: #dcdbd3;
-    height: 500px;
+    height: 835px;
     display: flex;
 }
 
@@ -67,9 +67,10 @@ aside {
 
 .message {
     background-color: #8edafc;
-    height: 70px;
+    height: 100px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: .5rem;
 }
 
@@ -115,6 +116,12 @@ aside {
     width: 250px;
 }
 
+.container {
+    background-image: url('./img/mine.jpg');
+    height: 450px;
+    width: 700px;
+}
+
 .container>img {
     height: 370px;
     width: 700px;
@@ -141,4 +148,19 @@ aside {
     width: 80%;
     padding: 1rem;
     border: none;
+}
+
+.userL {
+    display: flex;
+    align-items: center;
+    border-bottom: lightgray 1px solid;
+    background-color: white;
+    height: calc(360px/4);
+}
+
+.userL>img {
+    vertical-align: middle;
+    height: 50px;
+    border-radius: 50%;
+    margin: .5rem
 }

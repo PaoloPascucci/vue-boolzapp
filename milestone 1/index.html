@@ -40,7 +40,7 @@
                     </header>
     <main class="clearfix">
         <aside>
-            <div class="body">
+            
                 <div class="message">
                     <div class="whitecircle">
                         <i class="fas fa-bell-slash"></i>
@@ -58,15 +58,18 @@
                 
                 </div>
                 <div class="user" id="app">
-                    <div class="" v-for="contact in contacts">
-                        <div> {{contact.name}}</div>
+                    <div class="userC" v-for="contact in contacts">
+                        <div class="userL">
+                            <img :src="contact.avatar" alt="">
+                            <span>
+                                {{contact.name}}
+                            </span>
+                        </div>
                     </div>
-                </div>
-            </div>
+                    </div>
         </aside>
         <section>
         <div class="container">
-            <img src="./img/mine.jpg" alt="">
         </div>
         <div class="chat">
             <i class="far fa-smile"></i>
