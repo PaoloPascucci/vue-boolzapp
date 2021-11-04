@@ -199,3 +199,9 @@ aside {
     display: flex;
     flex-direction: column;
 }
+
+.txt-end {
+    text-align: end;
+    font-size: 10px;
+    color: gray;
+}

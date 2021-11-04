@@ -59,7 +59,7 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
         </div>
-        <div @click="changeUser" class="user" v-for="contact in contacts">
+        <div @click="changeUser(i)" class="user" v-for="(contact,i) in contacts">
             <div class="userC">
                 <div class="userL">
                     <img :src="contact.avatar" alt="">
@@ -75,7 +75,7 @@
             <div class="message_cont clearfix">
                 <div class="messages" v-for="(message, i) in contacts[activeContacts].messages" :class="message.status">
                     <p>{{message.text}}</p>
-                    <p>{{message.date}}</p>
+                    <p class="txt-wnd">{{message.date}}</p>
                 </div>
             </div>
         </div>

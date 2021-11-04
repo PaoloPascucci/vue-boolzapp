@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-
+        activeContacts: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -86,12 +86,11 @@ const app = new Vue({
                     }
                 ],
             },
-        ],
-        activeContacts: 0
+        ]
     },
     methods: {
-        changeUser() {
-            activeContacts + index
+        changeUser(i) {
+            this.activeContacts = i
         }
     }
 })
