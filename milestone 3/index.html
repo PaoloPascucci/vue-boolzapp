@@ -81,7 +81,7 @@
         </div>
         <div class="chat">
             <i class="far fa-smile"></i>
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input type="text" placeholder="Scrivi un messaggio" v-model="NewMessage" @keyup.enter="AddMessage">
             <i class="fas fa-microphone"></i>
         </div>
     </section>

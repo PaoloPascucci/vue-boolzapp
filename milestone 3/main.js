@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         activeContacts: 0,
+        NewMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -91,6 +92,16 @@ const app = new Vue({
     methods: {
         changeUser(i) {
             this.activeContacts = i
+        },
+        AddMessage() {
+            if (this.NewMessage != '') {
+                this.contacts[this.activeContacts].messages.push({
+                    date: '10/01/2020 16:30:30',
+                    text: this.NewMessage,
+                    status: 'sent'
+                })
+            }
+            this.NewMessage = ''
         }
     }
 })
