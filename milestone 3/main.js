@@ -100,7 +100,7 @@ const app = new Vue({
                     text: this.NewMessage,
                     status: 'sent',
                 })
-                setTimeout(this.AddResponse(), 3000);
+                setTimeout(this.AddResponse, 3000);
             }
             this.NewMessage = ''
         },
@@ -110,8 +110,6 @@ const app = new Vue({
                 text: 'Mi dissocio',
                 status: 'received'
             })
-
         }
-
     }
 })
