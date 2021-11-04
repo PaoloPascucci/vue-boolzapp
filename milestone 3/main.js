@@ -98,10 +98,20 @@ const app = new Vue({
                 this.contacts[this.activeContacts].messages.push({
                     date: '10/01/2020 16:30:30',
                     text: this.NewMessage,
-                    status: 'sent'
+                    status: 'sent',
                 })
+                setTimeout(this.AddResponse(), 3000);
             }
             this.NewMessage = ''
+        },
+        AddResponse() {
+            this.contacts[this.activeContacts].messages.push({
+                date: '10/01/2020 16:30:30',
+                text: 'Mi dissocio',
+                status: 'received'
+            })
+
         }
+
     }
 })
