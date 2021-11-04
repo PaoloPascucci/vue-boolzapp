@@ -13,76 +13,80 @@
 </head>
 
 <body>
-    <header>
-        <div class="head">
-                <div class="img">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span class="name">Nome Utente</span>
-                </div>
-                    <div class="Fa_ICON">
-                        <i class="fas fa-circle-notch"></i>
-                        <i class="fas fa-comment-alt"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+    <div id="app">
+<header>
+    <div class="head">
+        <div class="img">
+            <img src="./img/avatar_io.jpg" alt="">
+            <span class="name">Nome Utente</span>
+        </div>
+        <div class="Fa_ICON">
+            <i class="fas fa-circle-notch"></i>
+            <i class="fas fa-comment-alt"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+    </div>
+    <div class="head_2">
+        <div class="cont">
+
+            <div class="img">
+                    <img :src="contacts[activeContacts].avatar" alt="">
                     </div>
-                    </div>
-                    <div class="head_2">
-                        <div class="cont">
-                            <div class="img">
-                                <img src="./img/avatar_1.jpg" alt="">
-                            </div>
-                            <span class="name2">Michele</span>
-                            <p class="access">Ultimo accesso alle</p>
+                        <span class="name2">{{contacts[activeContacts].name}}</span>
+                        <p class="access">Ultimo accesso alle</p>
                         </div>
                         <div class="Fa_ICON">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
-                    </div>
-                    </div>
-                    </header>
+                        </div>
+    </header>
     <main class="clearfix">
         <aside>
-            
-                <div class="message">
-                    <div class="whitecircle">
-                        <i class="fas fa-bell-slash"></i>
-                    </div>
-                    <div class="div">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
-                    </div>
+        <div class="message">
+            <div class="whitecircle">
+                <i class="fas fa-bell-slash"></i>
+            </div>
+            <div class="div">
+                <p>Ricevi notifiche di nuovi messaggi</p>
+                <a href="#">Attiva notifiche desktop</a>
+            </div>
+        </div>
+        <div class="search">
+            <div class="input">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+        </div>
+        <div @click="changeUser" class="user" v-for="contact in contacts">
+            <div class="userC">
+                <div class="userL">
+                    <img :src="contact.avatar" alt="">
+                    <span>
+                        {{contact.name}}
+                    </span>
                 </div>
-                <div class="search">
-                    <div class="input">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
-                    </div>
-                
-                </div>
-                <div class="user" id="app">
-                    <div class="userC" v-for="contact in contacts">
-                        <div class="userL">
-                            <img :src="contact.avatar" alt="">
-                            <span>
-                                {{contact.name}}
-                            </span>
-                        </div>
-                    </div>
-                    </div>
+            </div>
+        </div>
         </aside>
         <section>
         <div class="container">
+            <div class="message_cont clearfix">
+                <div class="messages" v-for="(message, i) in contacts[activeContacts].messages" :class="message.status">
+                    <p>{{message.text}}</p>
+                    <p>{{message.date}}</p>
+                </div>
+            </div>
         </div>
         <div class="chat">
             <i class="far fa-smile"></i>
             <input type="text" placeholder="Scrivi un messaggio">
             <i class="fas fa-microphone"></i>
         </div>
-        </section>
+    </section>
     </main>
-
-
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./main.js"></script>

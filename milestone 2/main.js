@@ -86,6 +86,12 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+        activeContacts: 0
+    },
+    methods: {
+        changeUser() {
+            activeContacts + index
+        }
     }
 })
