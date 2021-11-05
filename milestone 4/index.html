@@ -9,7 +9,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <title>Boolzapp - M1</title>
+    <title>Boolzapp - M4</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
     <div class="head">
         <div class="img">
             <img src="./img/avatar_io.jpg" alt="">
-            <span class="name">Nome Utente</span>
+            <span class="name">Paolo Pascucci</span>
         </div>
         <div class="Fa_ICON">
             <i class="fas fa-circle-notch"></i>
@@ -56,10 +56,11 @@
         <div class="search">
             <div class="input">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="contactSearch" @keyup="Searching()">
             </div>
         </div>
-        <div @click="changeUser(i)" class="user" v-for="(contact,i) in contacts">
+        <div @click="changeUser(i)" class="user" v-for="(contact,i) in contacts"
+            v-if="contact.name.toLowerCase().includes(contactSearch)">
             <div class="userC">
                 <div class="userL">
                     <img :src="contact.avatar" alt="">

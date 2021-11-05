@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         activeContacts: 0,
         NewMessage: '',
+        contactSearch: '',
         contacts: [
             {
                 name: 'Michele',
@@ -110,6 +111,9 @@ const app = new Vue({
                 text: 'Mi dissocio',
                 status: 'received'
             })
+        },
+        Searching() {
+
         }
     }
 })
