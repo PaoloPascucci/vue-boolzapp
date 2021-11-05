@@ -96,7 +96,7 @@ const app = new Vue({
         AddMessage() {
             if (this.NewMessage != '') {
                 this.contacts[this.activeContacts].messages.push({
-                    date: '10/01/2020 16:30:30',
+                    date: dayjs().format('DD/MM/YYYY H:mm:ss'),
                     text: this.NewMessage,
                     status: 'sent',
                 })
@@ -106,7 +106,7 @@ const app = new Vue({
         },
         AddResponse() {
             this.contacts[this.activeContacts].messages.push({
-                date: '10/01/2020 16:30:30',
+                date: dayjs().format('DD/MM/YYYY H:mm:ss'),
                 text: 'Mi dissocio',
                 status: 'received'
             })
