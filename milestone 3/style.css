@@ -68,7 +68,7 @@ header {
 
 main {
     background-color: #dcdbd3;
-    height: 835px;
+    height: calc(100vh - 100px);
     display: flex;
 }
 
@@ -130,7 +130,7 @@ aside {
 
 .container {
     background-image: url('./img/mine.jpg');
-    height: 450px;
+    height: calc(100vh - 150px);
     width: 700px;
 }
 
@@ -195,7 +195,7 @@ aside {
     padding: .5rem;
 }
 
-.message_cont {
+.chat_cont {
     display: flex;
     flex-direction: column;
 }
@@ -204,4 +204,18 @@ aside {
     text-align: end;
     font-size: 10px;
     color: gray;
+}
+
+.userC {
+    height: calc(100vh - 240px);
+    background-color: white;
+    overflow-y: scroll
+}
+
+.userL:hover {
+    background-color: lightgray;
+}
+
+.userL.active {
+    background-color: palegreen;
 }

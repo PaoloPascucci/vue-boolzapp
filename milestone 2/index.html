@@ -18,7 +18,7 @@
     <div class="head">
         <div class="img">
             <img src="./img/avatar_io.jpg" alt="">
-            <span class="name">Nome Utente</span>
+            <span class="name">Paolo Pascucci</span>
         </div>
         <div class="Fa_ICON">
             <i class="fas fa-circle-notch"></i>
@@ -59,9 +59,9 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
         </div>
+        <div class="userC">
         <div @click="changeUser(i)" class="user" v-for="(contact,i) in contacts">
-            <div class="userC">
-                <div class="userL">
+                <div class="userL" :class="i === activeContacts ? 'active' : ''">
                     <img :src="contact.avatar" alt="">
                     <span>
                         {{contact.name}}
@@ -72,7 +72,7 @@
         </aside>
         <section>
         <div class="container">
-            <div class="message_cont clearfix">
+            <div class="chat_cont clearfix">
                 <div class="messages" v-for="(message, i) in contacts[activeContacts].messages" :class="message.status">
                     <p>{{message.text}}</p>
                     <p class="txt-wnd">{{message.date}}</p>

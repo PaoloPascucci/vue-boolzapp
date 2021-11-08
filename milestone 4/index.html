@@ -59,21 +59,21 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="contactSearch" @keyup="Searching()">
             </div>
         </div>
-        <div @click="changeUser(i)" class="user" v-for="(contact,i) in contacts"
-            v-if="contact.name.toLowerCase().includes(contactSearch)">
-            <div class="userC">
-                <div class="userL">
-                    <img :src="contact.avatar" alt="">
-                    <span>
-                        {{contact.name}}
-                    </span>
-                </div>
-            </div>
+        <div class="userC">
+            <div @click="changeUser(i)" v-for="(contact,i) in contacts" class="user"
+                v-if="contact.name.toLowerCase().includes(contactSearch)">
+                    <div class="userL" :class="i === activeContacts ? 'active' : ''">
+                        <img :src="contact.avatar" alt="">
+                        <span>
+                            {{contact.name}}
+                        </span>
+                    </div>
+                    </div>
         </div>
         </aside>
         <section>
         <div class="container">
-            <div class="message_cont clearfix">
+            <div class="chat_cont clearfix">
                 <div class="messages" v-for="(message, i) in contacts[activeContacts].messages" :class="message.status">
                     <p>{{message.text}}</p>
                     <p class="txt-wnd">{{message.date}}</p>
